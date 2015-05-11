@@ -1,0 +1,21 @@
+{{outlet}}
+
+<form {{action "createName" on="submit"}}>
+	{{input type="text" id="new-firstname" placeholder="Input First Name" value=newFirstName valueBinding=model.firstname}}
+	{{input type="text" id="new-lastname" placeholder="Input Last Name" value=newLastName valueBinding=model.lastname}}
+	<button type="submit" class="btn">
+    	Log in!
+  	</button>
+</form>
+
+
+
+<hr>
+
+<ul id="todo-list">
+    {{#each}}
+        <li>
+            <label>{{firstname}} {{lastname}}</label>
+        </li>
+    {{/each}}
+</ul>
